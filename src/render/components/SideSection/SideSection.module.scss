@@ -1,0 +1,11 @@
+:global(.side-section){
+    background: linear-gradient(45deg, #00aeff, #a68eff);
+}
+
+:global(.side-bar-nav) {
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-decoration: none;
+    height: 100px;
+}

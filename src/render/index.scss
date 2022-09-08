@@ -1,0 +1,77 @@
+$grid-gutter-width: 0rem !default;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+
+
+html,
+body,
+#root,
+#app {
+    height: 100%;
+    width: 100%;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: 100;
+    max-width: 100;
+}
+
+.card {
+    &:not(.expand-card) {
+        max-height: 400px;
+        overflow-y: scroll;
+        min-height: 300px;
+    }
+
+    border-radius: 15px;
+}
+
+
+.main-side-bar {
+    &:not(.show) {
+        display: block;
+        width: 80px;
+
+        &:hover {
+            width: 100%;
+            @include transition($transition-collapse-width);
+        }
+    }
+
+    &.collapsing {
+        width: 0px;
+        height: auto;
+        @include transition($transition-collapse-width);
+    }
+}
+
+
+.cls-padding {
+    padding: 0, 0, 0, 0;
+}
+
+.input-group-text {
+    &.word-wrap {
+        display: inline-block;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, #00aeff, #a68eff);
+    border-radius: 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
+    box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
+}
